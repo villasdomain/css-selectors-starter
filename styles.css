@@ -67,7 +67,7 @@
     add the universal CSS selector to the styles below
 */
 /* ----- */
-{
+*{
     font-family: var(--fonts);
     line-height: 1.3;
     color: var(--dk-gray);
@@ -411,7 +411,10 @@ span{
     select all of the inputs, labels, select dropdowns and text areas on the page by tag name
 */
 /* ----- */
-{
+input,
+label,
+select,
+textarea{
     display: block;
     width: 95%;
     margin: 0.5rem auto;
@@ -425,7 +428,8 @@ span{
     select all of the inputs and selects by tag name
 */
 /* ----- */
-{
+input,
+select{
     height: 2rem;
     border: 2px solid var(--dk-gray);
 }
@@ -436,7 +440,7 @@ span{
     select all of the inputs on focus (by tag name/pseudo-class) on the page
 */
 /* ----- */
-{
+inout:focus{
     outline: 4px solid var(--orange);
     outline-offset: 2px;
     border: none;
@@ -448,7 +452,7 @@ span{
     select all of the inputs on focus (by tag name/pseudo-class) on the page
 */
 /* ----- */
-{
+input:focus{
     outline-color: var(--dv-dk-blue);
 }
 
@@ -458,7 +462,7 @@ span{
     select the labels in the form using the tag name/element selector
 */
 /* ----- */
-{
+label{
     font-size: 1.25rem;
     margin-top: 16px;
 }
@@ -469,7 +473,7 @@ span{
     select the spans in the form using the class name selector
 */
 /* ----- */
-{
+span.form-label{
     font-size: 1.5rem;
     font-weight: bold;
     display: inline;
@@ -482,7 +486,7 @@ span{
     select all of the submit buttons (by tag name/type attribute) on the page
 */
 /* ----- */
-{
+input[type="submit"]{
     display: block;
     margin: 32px auto 16px;
     width: 100%;
@@ -505,7 +509,7 @@ span{
     select all of the submit buttons on hover (by tag name/type attribute name) on the page
 */
 /* ----- */
-{
+input[type="submit"]:hover{
     box-shadow: var(--box-shadow-sm);
     color: var(--purple);
     background-color: var(--lt-gray);
@@ -517,7 +521,7 @@ span{
     select all of the submit buttons on focus (by tag name/type attribute/pseudo-class) on the page
 */
 /* ----- */
-{
+input[type="submit"]:focus{
     box-shadow: var(--box-shadow-sm);
     outline: 4px solid var(--dv-dk-blue);
     outline-offset: 1px;
@@ -532,7 +536,7 @@ span{
     select the h2 in the list styling section using the class name selector
 */
 /* ----- */
-{
+.list-section h2{
     color: var(--blue);
 }
 
@@ -542,7 +546,7 @@ span{
     select the unordered list in the list styling container using the id and tag name selectors
 */
 /* ----- */
-{
+#list-styling-container ul{
     display: block;
     width: fit-content;
     margin: 32px auto;
@@ -554,7 +558,7 @@ span{
     select all of the list items in the list styling container using the ID and tag name selectors
 */
 /* ----- */
-{
+#list-styling-container li{
     font-size: 1.25rem;
     line-height: 1.35;
     margin-bottom: 8px;
@@ -567,7 +571,7 @@ span{
     select the bullets on the unordered list in the list styling section using the tag name and pseudo-class selectors
 */
 /* ----- */
-{
+#list-styling-container li::marker{
     font-size: 3rem;
     content: "\2730";
 }
@@ -578,7 +582,7 @@ span{
     select the first list item in the list styling container using the ID, tag name, and pseudo-class selectors
 */
 /* ----- */
-{
+#list-styling-container li:first-child{
     color: var(--purple);
 }
 
@@ -588,7 +592,7 @@ span{
     select the last list item in the list styling container using the ID, tag name, and pseudo-class selectors
 */
 /* ----- */
-{
+#list-styling-container li:last-child{
     color: var(--dv-lt-blue);
 }
 
@@ -601,7 +605,7 @@ span{
     select all of the divs in the more styling section using the ID, descendant, and tag name selectors
 */
 /* ----- */
-{
+#more-styling-section div{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -613,7 +617,7 @@ span{
     select the first div in the more styling section using the ID, tag name and direct descendant selectors
   */
   /* ----- */
-{
+#more-styling-section > div:first-of-type{
     width: 300px;
     height: 300px;
     background-color: var(--dv-red);
@@ -626,7 +630,7 @@ span{
     select the second div in the more styling section using the ID, descendant, and tag name selectors
 */
 /* ----- */
-{
+#more-styling-section div:nth-of-type(2){
     width: 250px;
     height: 250px;
     background-color: var(--dv-orange);
@@ -638,7 +642,7 @@ span{
     select the third div in the more styling section using the ID, descendant, and class name selectors
 */
 /* ----- */
-{
+#more-styling-section .third-box{
     width: 200px;
     height: 200px;
     background-color: var(--dv-yellow);
@@ -650,7 +654,7 @@ span{
     select the fourth div in the pseudo-class styling section using the ID, tag name, descendant, and class selectors
 */
 /* ----- */
-{
+#pseudo-class-section div .fourth-box{
     width: 150px;
     height: 150px;
     background-color: var(--dv-mint);
@@ -662,7 +666,7 @@ span{
     select the last div in the more styling section using the ID, tag name, descendant, and class selectors
 */
 /* ----- */
-{
+#more-styling-section div .last-box{
     width: 100px;
     height: 100px;
     background-color: var(--dv-lt-blue);
@@ -677,7 +681,7 @@ span{
     select the section with the ID of software by its ID 
 */
 /* ----- */
-{
+#software{
     margin-top: 16px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -690,7 +694,7 @@ span{
     select the links in the software section using the ID, tag name, and child/descendant selector
 */
 /* ----- */
-{
+#software a{
     width: 100px;
     height: auto;
     margin: 0 auto;
@@ -705,7 +709,7 @@ span{
     select the links in the software section on hover using the ID, tag name, child/descendant selector, and pseudo-class selector
 */
 /* ----- */
-{
+#software a:hover{
     background-color: var(--dk-gray);
     box-shadow: var(--box-shadow-sm);
 }
@@ -716,7 +720,7 @@ span{
     select the SVGs in the software section using the ID, tag name, and descendant selectors
 */
 /* ----- */
-{
+#software svg{
     stroke: var(--dk-gray);
 }
 
@@ -739,7 +743,7 @@ span{
     select the table in the table styles section using the element/tag name selector
 */
 /* ----- */
-{ 
+table{ 
     border-collapse: collapse;
     width: 100%;
 }
@@ -750,7 +754,7 @@ span{
     select the caption in the table styles section using the element/tag name selector
 */
 /* ----- */
-{ 
+caption{ 
     font-weight: bold;
     font-size: 1.25rem;
     margin-bottom: 8px;
@@ -762,7 +766,7 @@ span{
     select the table header cells in the table styles section using the element/tag name, descendant, and ID selectors
 */
 /* ----- */
-{ 
+#table-styles th{ 
     background-color: var(--blue);
     color: var(--white);
 }
@@ -773,7 +777,7 @@ span{
     select the odd table rows in the table body of the table styles section using the element/tag name and the pseudo-class selectors
 */
 /* ----- */
-{ 
+tbody td:nth-child(odd){ 
     background-color: var(--dv-orange);
 }
 
@@ -783,7 +787,7 @@ span{
     select the first column in the table body of the table styles section using the element/tag name and the pseudo-class selectors
 */
 /* ----- */
-{ 
+tbody td:first-child{ 
     font-weight: bold;
 }
 
@@ -793,7 +797,8 @@ span{
     select the table heading cells (th) and the table data cells in the table styles section using the element/tag name and multiple element selectors
 */
 /* ----- */
-{ 
+th,
+td{ 
     border: 1px solid var(--dk-gray);
     padding: 4px;
 }
@@ -804,7 +809,7 @@ span{
     select the table footer in the table styles section using the element/tag name selector
 */
 /* ----- */
-{ 
+tfoot{ 
     font-weight: bold;
 }
 
@@ -817,7 +822,7 @@ span{
     select all of the divs in the border styling section using the ID, descendant, and tag name selectors
 */
 /* ----- */
-{
+#border-styling-section div{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -829,7 +834,7 @@ span{
     select the first div in the border styling section using the ID, tag name and direct descendant selectors
   */
   /* ----- */
-{
+#boarder-styling-section{
     width: 300px;
     height: 300px;
     margin: 16px auto;
@@ -842,7 +847,7 @@ span{
     select the second div in the border styling section using the ID, descendant, and tag name selectors
 */
 /* ----- */
-{
+#boarder-styling-section div:nth-of-type(2){
     width: 250px;
     height: 250px;
     border: 6px dotted var(--dv-orange);
@@ -854,7 +859,7 @@ span{
     select the third div in the border styling section using the ID, descendant, and class name selectors
 */
 /* ----- */
-{
+#boarder-styling-section .third-box{
     width: 200px;
     height: 200px;
     border: 6px dashed var(--dv-yellow);
@@ -866,7 +871,7 @@ span{
     select the fourth div in the pseudo-class styling section using the ID, tag name, descendant, and class selectors
 */
 /* ----- */
-{
+#pseudo-class-styling-section div .fourth-box{
     width: 150px;
     height: 150px;
     border: 6px double var(--dv-mint);
@@ -878,7 +883,7 @@ span{
     select the last div in the more styling section using the ID, tag name, descendant, and class selectors
 */
 /* ----- */
-{
+#more-styling-section div .last-box{
     width: 100px;
     height: 100px;
     border: 6px inset var(--dv-lt-blue);
@@ -893,7 +898,7 @@ span{
     select the pseudo-elements section using the ID selector
 */
 /* ----- */
-{
+#pseudo-elements-section{
     position: relative;
 }
 
@@ -903,7 +908,7 @@ span{
     select the div in the pseudo-elements section using the ID, child/descendant, and tag name selectors
 */
 /* ----- */
-{
+#pseudo-elements-section div{
     width: 275px;
     height: 275px;
     margin: 56px auto 32px;
@@ -918,7 +923,7 @@ span{
     select the div's before element in the pseudo-elements section using the ID, child/descendant, pseudo-element, and tag name selectors
 */
 /* ----- */
-{
+#pseudo-elements-section div::before{
     content: "\2730";
     padding: 12px 24px;
     border-radius: 50%;
@@ -938,7 +943,7 @@ span{
     select the image in the pseudo-elements section using the ID, child/descendant, and tag name selectors
 */
 /* ----- */
-{
+#pseudo-elements-section img{
     width: 200px;
     height: 200px;
     margin: 0 auto;
@@ -956,7 +961,7 @@ span{
     select the footer element by tag name
 */
 /* ----- */
-{
+footer {
     margin: 2rem auto 0 auto;
     text-align: center;
 }
